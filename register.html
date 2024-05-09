@@ -75,7 +75,7 @@
             display: block;
             margin-bottom: 5px;
             font-size: 14px;
-            color: #333; /* Dark gray color for labels */
+            color: #ffff; /* Dark gray color for labels */
         }
 
         .registration-form .form-group input,
@@ -86,7 +86,7 @@
             border-radius: 5px;
             font-size: 14px;
             background-color: transparent; /* Changed background to transparent */
-            color: #333;
+            color: #ffff;
         }
 
         .registration-form .form-group.checkbox {
@@ -127,106 +127,102 @@
             border-radius: 5px;
             font-size: 14px;
             background-color: #f4f4f4; /* Light gray background for the select box */
-            color: #333; /* Dark gray text color */
+            color: #ffff; /* Dark gray text color */
         }
     </style>
 </head>
 
 <body>
 
-    <!-- 
-    - #HEADER
-  -->
+<!--
+- #HEADER
+-->
 
-    <header class="header" data-header>
+<header class="header" data-header>
 
-        <a href="index.html" class="logo">
-            <img src="./assets/images/logo-light.PNG" width="156" height="32" alt="ZERG" class="logo-light">
-            <img src="./assets/images/logo-dark.PNG" width="156" height="32" alt="ZERG" class="logo-dark">
-        </a>
-
-
-        <button class="icon-btn theme-switch has-state" aria-pressed="false" aria-label="Toggle light and dark theme" data-theme-btn>
-            <span class="material-symbols-outlined light-icon" aria-hidden="true">light_mode</span>
-
-            <span class="material-symbols-outlined dark-icon" aria-hidden="true">dark_mode</span>
-        </button>
+    <a href="index.html" class="logo">
+        <img src="./assets/images/logo-light.PNG" width="156" height="32" alt="ZERG" class="logo-light">
+        <img src="./assets/images/logo-dark.PNG" width="156" height="32" alt="ZERG" class="logo-dark">
+    </a>
 
 
-    </header>
+    <button class="icon-btn theme-switch has-state" aria-pressed="false" aria-label="Toggle light and dark theme" data-theme-btn>
+        <span class="material-symbols-outlined light-icon" aria-hidden="true">light_mode</span>
+
+        <span class="material-symbols-outlined dark-icon" aria-hidden="true">dark_mode</span>
+    </button>
 
 
-    <!-- 
-    - #LOGIN FORM
-  -->
-    <div class="registration-container">
-        <div class="registration-window">
-            <h2>Create your ZERG account </h2>
-            <form class="registration-form" id="registrationForm">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" required>
-                </div>
+</header>
 
-                <div class="form-group">
-                    <label for="surname">Surname:</label>
-                    <input type="text" id="surname" required>
-                </div>
 
-                <div class="form-group">
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="dob">Date of Birth:</label>
-                    <input type="date" id="dob" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="sex">Sex:</label>
-                    <select id="sex" required>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" required>
-                </div>
-
-                <div class="form-group checkbox">
-                    <input type="checkbox" id="terms" required>
-                    <label for="terms">I agree to the terms and conditions</label>
-                </div>
-
-                <!-- Google reCAPTCHA -->
-                <div class="g-recaptcha" data-sitekey="6LcoKtYpAAAAAG7663Lmt6Sj7i8n-NPvfL9pIScu"></div>
-                <button type="submit">Register</button>
-            </form>
-        </div>
+<!--
+- #LOGIN FORM
+-->
+<form class="registration-form" id="registrationForm" action="register.php" method="POST">
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" name="surname" required>
+    </div>
+    <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+    </div>
+    <div class="form-group">
+        <label for="sex">Sex:</label>
+        <select id="sex" name="sex" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+    </div>
+    <div class="form-group checkbox">
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree to the terms and conditions</label>
     </div>
 
-    <!-- 
-    - #FOOTER
-  -->
+    <!-- Google reCAPTCHA -->
+    <div class="g-recaptcha" data-sitekey="your-site-key"></div>
 
-    <footer class="footer">
+    <button type="submit">Register</button>
+</form>
 
-        <p class="copyright body-medium">Copyright 2024 ZERG SDH</p>
 
-        <a href="index.html" class="logo">
-            <img src="./assets/images/logo-light.PNG" width="156" height="32" alt="ZERG" class="logo-light">
 
-            <img src="./assets/images/logo-dark.PNG" width="156" height="32" alt="ZERG" class="logo-dark">
-        </a>
+<!--
+- #FOOTER
+-->
 
-    </footer>
+<footer class="footer">
 
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script src="register.js"></script>
+    <p class="copyright body-medium">Copyright 2024 ZERG SDH</p>
+
+    <a href="index.html" class="logo">
+        <img src="./assets/images/logo-light.PNG" width="156" height="32" alt="ZERG" class="logo-light">
+
+        <img src="./assets/images/logo-dark.PNG" width="156" height="32" alt="ZERG" class="logo-dark">
+    </a>
+
+</footer>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="register.js"></script>
 </body>
 
 </html>
