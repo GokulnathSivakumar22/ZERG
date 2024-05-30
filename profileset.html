@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZERG - Ensuring Good Health in Every Meal.</title>
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="./assets/js/theme.js"></script>
+  <script src="./assets/js/global.js" type="module"></script>
+  <script src="./assets/js/home.js" type="module"></script>
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: #050303b0; /* Dark background for better visibility */
+    }
+  
+    .main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 80vh;
+    }
+  
+    .profile-section {
+      width: 50%;
+      padding: 20px;
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.11); /* dark theme background */
+      backdrop-filter: blur(5px);
+      text-align: center;
+      transition: background 0.3s ease;
+      color: #ffffff; /* Text color for dark theme */
+    }
+  
+    .dark-theme .profile-section {
+      background: rgb(248, 245, 245); /* light theme background with increased opacity */
+      color: #161313; /* White text color for dark theme */
+    }
+  
+    .profile-info {
+      display: flex;
+      justify-content: center; /* Centering content */
+      align-items: center;
+      margin: 10px 0;
+    }
+  
+    .profile-info p {
+      margin: 0;
+      display: flex;
+      align-items: center;
+    }
+  
+    .profile-info strong {
+      margin-right: 10px;
+    }
+  
+    #editModal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 30%;
+      padding: 20px;
+      background-color: rgba(253, 250, 250, 0.9); /* Dark theme modal background */
+      border: 1px solid #444; /* Slightly lighter border for visibility */
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8); /* Dark shadow for depth */
+      display: none;
+      z-index: 1000;
+      color: #fff; /* White text for readability */
+    }
+  
+    #editForm {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    #editForm input, #editForm select, #editForm button {
+      padding: 8px;
+      width: 100%;
+      background-color: #333; /* Dark input fields */
+      color: #fff; /* White text for inputs */
+      border: 1px solid #383838; /* Slightly lighter border for inputs */
+    }
+  
+    #editForm label {
+      text-align: left;
+      width: 100%;
+      color: #e7e6e6; /* Light gray labels for visibility */
+    }
+  </style>
+  
+</head>
+<body class="light-theme">
+
+<header class="header" data-header>
+  <a href="/" class="logo">
+    <img src="./assets/images/logo-light.svg" width="156" height="32" alt="ZERG" class="logo-light">
+    <img src="./assets/images/logo-dark.PNG" width="156" height="32" alt="ZERG" class="logo-dark">
+  </a>
+  <nav class="navbar">
+    <ul class="navbar-list">
+      <li><a href="./home.html" class="navbar-link title-small has-state">Home</a></li>
+      <li><a href="userrec.html" class="navbar-link title-small has-state">Recipes</a></li>
+      <li><a href="./usernut.html" class="navbar-link title-small has-state">Nutritionist Around</a></li>
+      <li><a href="./usercomm.html" class="navbar-link title-small has-state">Community</a></li>
+      <li><a href="./user.html" class="navbar-link title-small has-state active">My Profile</a></li>
+    </ul>
+  </nav>
+  <button class="icon-btn theme-switch has-state" aria-pressed="false" aria-label="Toggle light and dark theme"
+      data-theme-btn>
+      <span class="material-symbols-outlined light-icon" aria-hidden="true">light_mode</span>
+      <span class="material-symbols-outlined dark-icon" aria-hidden="true">dark_mode</span>
+  </button>
+</header>
+
+<main class="main" data-main>
+  <div class="profile-section">
+    <h1>User Profile</h1>
+    <div class="profile-info"><p><strong>Name:</strong> <span id="userName">John Doe</span></p></div>
+    <div class="profile-info"><p><strong>Email:</strong> <span id="userEmail">john.doe@example.com</span></p></div>
+    <div class="profile-info"><p><strong>Birthdate:</strong> <span id="userBirthdate">Jan 01, 1990</span></p></div>
+    <div class="profile-info"><p><strong>Gender:</strong> <span id="userGender">Male</span></p></div>
+    <button onclick="openEditModal()">Edit Profile</button>
+  </div>
+
+  <!-- Edit Profile Modal -->
+  <div id="editModal">
+    <form id="editForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" value="John Doe">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" value="john.doe@example.com">
+      <label for="birthdate">Birthdate:</label>
+      <input type="date" id="birthdate" name="birthdate" value="1990-01-01">
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender">
+        <option value="Male" selected>Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+      <button type="button" onclick="saveChanges()">Save Changes</button>
+      <button type="button" onclick="closeEditModal()">Cancel</button>
+    </form>
+  </div>
+</main>
+
+<footer class="footer">
+  <p>Copyright 2024 ZERG SDH</p>
+  <a href="/" class="logo">
+    <img src="./assets/images/logo-light.PNG" width="156" height="32" alt="ZERG" class="logo-light">
+    <img src="./assets/images/logo-dark.PNG" width="156" height="32" alt="ZERG" class="logo-dark">
+  </a>
+</footer>
+
+<script>
+  function openEditModal() {
+    document.getElementById('editModal').style.display = 'block';
+    document.getElementById('name').value = document.getElementById('userName').textContent;
+    document.getElementById('email').value = document.getElementById('userEmail').textContent;
+    document.getElementById('birthdate').value = document.getElementById('userBirthdate').textContent;
+    document.getElementById('gender').value = document.getElementById('userGender').textContent;
+  }
+
+  function closeEditModal() {
+    document.getElementById('editModal').style.display = 'none';
+  }
+
+  function saveChanges() {
+    document.getElementById('userName').textContent = document.getElementById('name').value;
+    document.getElementById('userEmail').textContent = document.getElementById('email').value;
+    document.getElementById('userBirthdate').textContent = document.getElementById('birthdate').value;
+    document.getElementById('userGender').textContent = document.getElementById('gender').value;
+    closeEditModal();
+  }
+</script>
+</body>
+</html>

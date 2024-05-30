@@ -1,0 +1,15 @@
+{
+    "name": "gokul/zerg",
+    "description": "My project description",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "GokulnathSivakumar22",
+            "email": "gokulnath.sivakumar@studenti.unipd.it"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}

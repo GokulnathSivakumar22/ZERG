@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>ZERG - Ensuring Good Health in Every Meal.</title>
+  <meta name="title" content="ZERG - Ensuring Good Health in Every Meal.">
+  <meta name="description" content="One nutritionist at a Time">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - theme js
+  -->
+  <script src="./assets/js/theme.js"></script>
+
+  <!-- 
+    - google font
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=DM+Serif+Display&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - material icon
+  -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0" />
+
+  <!-- 
+    - custom css
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - custom js
+  -->
+  <script src="./assets/js/global.js" type="module"></script>
+  <script src="./assets/js/home.js" type="module"></script>
+
+</head>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+
+    <a href="/" class="logo">
+      <img src="./assets/images/logo-light.svg" width="156" height="32" alt="ZERG" class="logo-light">
+      <img src="./assets/images/logo-dark.PNG" width="156" height="32" alt="ZERG" class="logo-dark">
+    </a>
+
+    <nav class="navbar">
+      <ul class="navbar-list">
+        <li>
+            <a href="./home.html" class="navbar-link title-small has-state">Home</a>
+          </li>
+  
+          <li>
+            <a href="userrec.html" class="navbar-link title-small has-state">Recipes</a>
+          </li>
+  
+          <li>
+            <a href="./usernut.html" class="navbar-link title-small has-state">Nutritionist Around</a>
+          </li>
+  
+          <li><a href="./usercomm.html" class="navbar-link title-small has-state">Community</a></li>
+  
+          <li>
+            <a href="./user.html" class="navbar-link title-small has-state active">My Profile</a>
+          </li>
+        
+      </ul>
+    </nav>
+
+    <button class="icon-btn theme-switch has-state" aria-pressed="false" aria-label="Toggle light and dark theme"
+      data-theme-btn>
+      <span class="material-symbols-outlined light-icon" aria-hidden="true">light_mode</span>
+
+      <span class="material-symbols-outlined dark-icon" aria-hidden="true">dark_mode</span>
+    </button>
+
+    <a href="./saved-recipes.html" class="btn btn-primary has-icon">
+      <span class="material-symbols-outlined" aria-hidden="true">book</span>
+
+      <span class="span">Saved Recipes</span>
+    </a>
+
+ <!-- Add this setting button -->
+ <a href="./profileset.html" class="btn btn-secondary has-icon">
+    <span class="material-symbols-outlined" aria-hidden="true">settings</span>
+
+    <span class="span">settings</span>
+  </a>
+
+  </header>
+
+  <!-- 
+    - #COMMUNITY
+  -->
+
+  <main class="main" data-main>
+
+    <article class="article" data-article>
+
+      <!-- 
+        - #COMMUNITY
+      -->
+
+      <section class="section community-section" aria-labelledby="community-label-1" data-community-section>
+
+        <div class="container">
+
+            
+<!-- Recipe Submission Section -->
+<div class="recipe-submission-section">
+    <h2 class="section-title">Add a Recipe</h2>
+    <div class="recipe-form">
+      <form>
+        <div class="form-group">
+          <input type="text" id="recipe-name" name="recipe-name" class="cool-input" placeholder="Enter Recipe Name" required>
+        </div>
+        <div class="form-group">
+          <label for="recipe-image">Add an Image of the Dish</label>
+          <input type="file" id="recipe-image" name="recipe-image" accept="image/*" required>
+        </div>
+        <div class="form-group">
+          <label for="recipe-ingredients">Ingredients</label>
+          <textarea id="recipe-ingredients" name="recipe-ingredients" rows="3" class="wide-textarea" placeholder="List the ingredients..." required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="recipe-instructions">Instructions</label>
+          <textarea id="recipe-instructions" name="recipe-instructions" rows="6" class="wide-textarea" placeholder="Write the cooking steps here..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Recipe</button>
+      </form>
+    </div>
+  </div>
+
+  
+  
+  
+  
+
+              <!-- User Recipes Section -->
+<section class="section slider-section" aria-labelledby="slider-label-1">
+    <div class="container">
+      <h2 class="section-title headline-small" id="slider-label-1">Your Recipes</h2>
+      <div class="slider">
+        <ul class="slider-wrapper" data-slider-wrapper>
+          <!-- Each slider item represents one recipe -->
+          <li class="slider-item">
+            <div class="card">
+              <figure class="card-media img-holder">
+                <img src="./assets/images/monika-grabkowska-G8gx6e2WYlI-unsplash.jpg" width="200" height="200" loading="lazy" alt="Recipe 1 image" class="img-cover">
+              </figure>
+              <div class="card-body">
+                <h3 class="title-small">
+                  <a href="./recipe-details.html" class="card-link">Recipe Name 1</a>
+                </h3>
+              </div>
+            </div>
+          </li>
+          <li class="slider-item">
+            <div class="card">
+              <figure class="card-media img-holder">
+                <img src="./assets/images/jenny-liu-X68a4jPM4c4-unsplash.jpg" width="200" height="200" loading="lazy" alt="Recipe 2 image" class="img-cover">
+              </figure>
+              <div class="card-body">
+                <h3 class="title-small">
+                  <a href="./recipe-details.html" class="card-link">Recipe Name 2</a>
+                </h3>
+              </div>
+            </div>
+          </li>
+          <!-- Additional recipes can be added in similar structure -->
+          <li class="slider-item" data-slider-item>
+            <a href="./all-recipes.html" class="load-more-card has-state">
+              <span class="label-large">Show more</span>
+              <span class="material-symbols-outlined" aria-hidden="true">navigate_next</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+
+      <!-- 
+        - #FOOTER
+      -->
+
+      <footer class="footer">
+
+        <p class="copyright body-medium">Copyright 2024 ZERG SDH</p>
+
+        <a href="/" class="logo">
+          <img src="./assets/images/logo-light.PNG" width="156" height="32" alt="ZERG" class="logo-light">
+
+          <img src="./assets/images/logo-dark.PNG" width="156" height="32" alt="ZERG" class="logo-dark">
+        </a>
+
+      </footer>
+
+    </article>
+  </main>
+
+</body>
+
+</html>

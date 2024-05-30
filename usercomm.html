@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>ZERG - Ensuring Good Health in Every Meal.</title>
+  <meta name="title" content="ZERG - Ensuring Good Health in Every Meal.">
+  <meta name="description" content="One nutritionist at a Time">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - theme js
+  -->
+  <script src="./assets/js/theme.js"></script>
+
+  <!-- 
+    - google font
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=DM+Serif+Display&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - material icon
+  -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0" />
+
+  <!-- 
+    - custom css
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - custom js
+  -->
+  <script src="./assets/js/global.js" type="module"></script>
+  <script src="./assets/js/home.js" type="module"></script>
+
+</head>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+
+    <a href="/" class="logo">
+      <img src="./assets/images/logo-light.svg" width="156" height="32" alt="ZERG" class="logo-light">
+      <img src="./assets/images/logo-dark.PNG" width="156" height="32" alt="ZERG" class="logo-dark">
+    </a>
+
+    <nav class="navbar">
+      <ul class="navbar-list">
+
+        <li>
+          <a href="./home.html" class="navbar-link title-small has-state">Home</a>
+        </li>
+
+        <li>
+          <a href="userrec.html" class="navbar-link title-small has-state">Recipes</a>
+        </li>
+
+        <li>
+          <a href="./usernut.html" class="navbar-link title-small has-state">Nutritionist Around</a>
+        </li>
+
+        <li><a href="./usercomm.html" class="navbar-link title-small has-state active">Community</a></li>
+
+        <li>
+          <a href="./user.html" class="navbar-link title-small has-state">My Profile</a>
+        </li>
+        
+      </ul>
+    </nav>
+
+    <button class="icon-btn theme-switch has-state" aria-pressed="false" aria-label="Toggle light and dark theme"
+      data-theme-btn>
+      <span class="material-symbols-outlined light-icon" aria-hidden="true">light_mode</span>
+
+      <span class="material-symbols-outlined dark-icon" aria-hidden="true">dark_mode</span>
+    </button>
+
+    <a href="./saved-recipes.html" class="btn btn-primary has-icon">
+      <span class="material-symbols-outlined" aria-hidden="true">book</span>
+
+      <span class="span">Saved Recipes</span>
+    </a>
+
+  </header>
+
+  <!-- 
+    - #COMMUNITY
+  -->
+
+  <main class="main" data-main>
+
+    <article class="article" data-article>
+
+      <!-- 
+        - #COMMUNITY
+      -->
+
+      <section class="section community-section" aria-labelledby="community-label-1" data-community-section>
+
+        <div class="container">
+
+            
+<!-- Start a Discussion Section -->
+<div class="start-discussion-section">
+    <h2 class="section-title">Start a Discussion</h2>
+    <div class="discussion-form">
+      <form>
+        <div class="form-group">
+          <input type="text" id="discussion-title" name="discussion-title" class="cool-input" placeholder="Enter Discussion Title" required>
+        </div>
+        <div class="form-group">
+          <label for="discussion-image">Add an Image</label>
+          <input type="file" id="discussion-image" name="discussion-image" accept="image/*" required>
+        </div>
+        <div class="form-group">
+          <label for="discussion-content">Put Your Thoughts</label>
+          <textarea id="discussion-content" name="discussion-content" rows="6" class="wide-textarea" placeholder="Write your thoughts here..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Start Discussion</button>
+      </form>
+    </div>
+  </div>
+  
+  
+  
+  
+
+               <!-- 
+        - #Community Slider -->
+    
+      <section class="section slider-section" aria-labelledby="slider-label-1" data-slider-section></section>
+
+
+      <section class="section slider-section" aria-labelledby="slider-label-1" data-slider-section>
+
+        <div class="container">
+
+          <h2 class="section-title headline-small" id="slider-label-1">Join Other Discussions</h2>
+
+          <div class="slider">
+
+            <ul class="slider-wrapper" data-slider-wrapper>
+
+              <li class="slider-item">
+                <div class="card">
+
+                  <figure class="card-media img-holder">
+                    <img src="./assets/images/loginback.jpg" width="200" height="200" loading="lazy" alt="breakfast.jpg name"
+                      class="img-cover">
+                  </figure>
+
+                  <div class="card-body">
+
+                    <h3 class="title-small">
+                      <a href="./discussion.html" class="card-link">Discussion 1</a>
+                    </h3>
+
+                    <div class="meta-wrapper">
+
+               
+
+                      <button class="icon-btn has-state removed" aria-label="Comment on the Discussion">
+                        <span class="material-symbols-outlined bookmark-add" aria-hidden="true">comment</span>
+
+                        <span class="material-symbols-outlined bookmark" aria-hidden="true">comment</span>
+                      </button>
+
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <li class="slider-item">
+                <div class="card">
+
+                  <figure class="card-media img-holder">
+                    <img src="./assets/images/loginpage.jpg" width="200" height="200" loading="lazy" alt="breakfast.jpg name"
+                      class="img-cover">
+                  </figure>
+
+                  <div class="card-body">
+
+                    <h3 class="title-small">
+                      <a href="./discussion.html" class="card-link">Discussion 3</a>
+                    </h3>
+
+                    <div class="meta-wrapper">
+
+            
+
+                      <button class="icon-btn has-state removed" aria-label="Comment on the Discussion">
+                        <span class="material-symbols-outlined bookmark-add" aria-hidden="true">comment</span>
+
+                        <span class="material-symbols-outlined bookmark" aria-hidden="true">comment</span>
+                      </button>
+
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <li class="slider-item">
+                <div class="card">
+
+                  <figure class="card-media img-holder">
+                    <img src="./assets/images/monika-grabkowska-G8gx6e2WYlI-unsplash.jpg" width="200" height="200" loading="lazy" alt="breakfast.jpg name"
+                      class="img-cover">
+                  </figure>
+
+                  <div class="card-body">
+
+                    <h3 class="title-small">
+                      <a href="./discussion.html" class="card-link">Discussion 4</a>
+                    </h3>
+
+            
+                    <div class="meta-wrapper">
+
+                      <button class="icon-btn has-state removed" aria-label="Comment on the Discussion">
+                        <span class="material-symbols-outlined bookmark-add" aria-hidden="true">comment</span>
+
+                        <span class="material-symbols-outlined bookmark" aria-hidden="true">comment</span>
+                      </button>
+
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <li class="slider-item">
+                <div class="card">
+
+                  <figure class="card-media img-holder">
+                    <img src="./assets/images/monika-grabkowska-JxffpY_6i5Y-unsplash.jpg" width="200" height="200" loading="lazy" alt="breakfast.jpg name"
+                      class="img-cover">
+                  </figure>
+
+                  <div class="card-body">
+
+                    <h3 class="title-small">
+                      <a href="./discussion.html" class="card-link">Discussion 2!</a>
+                    </h3>
+
+                    <div class="meta-wrapper">
+                      <button class="icon-btn has-state removed" aria-label="Comment on the Discussion">
+                        <span class="material-symbols-outlined bookmark-add" aria-hidden="true">comment</span>
+
+                        <span class="material-symbols-outlined bookmark" aria-hidden="true">comment</span>
+                      </button>
+
+                    </div>
+
+                  </div>
+
+                </div>
+              </li>
+
+              <li class="slider-item" data-slider-item>
+                <a href="./nutritionist.html" class="load-more-card has-state">
+                  <span class="label-large">Show more</span>
+
+                  <span class="material-symbols-outlined" aria-hidden="true">navigate_next</span>
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </section>
+        </div>
+
+      </section>
+
+      <!-- 
+        - #FOOTER
+      -->
+
+      <footer class="footer">
+
+        <p class="copyright body-medium">Copyright 2024 ZERG SDH</p>
+
+        <a href="/" class="logo">
+          <img src="./assets/images/logo-light.PNG" width="156" height="32" alt="Cook.io" class="logo-light">
+
+          <img src="./assets/images/logo-dark.PNG" width="156" height="32" alt="Cook.io" class="logo-dark">
+        </a>
+
+      </footer>
+
+    </article>
+  </main>
+
+</body>
+
+</html>

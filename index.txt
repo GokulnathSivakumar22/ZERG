@@ -1,11 +1,11 @@
-Cook.io - Cooking made easy.
-This is a recipe application made by codewithsadee
+ZERG - Ensuring Good Health in Every Meal.
+
 
 
 
 #---------- HEADER ----------#
 
-alt = Cook.io
+alt = ZERG
 
 Home
 Recipes
